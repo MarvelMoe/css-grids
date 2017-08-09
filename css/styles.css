@@ -1,0 +1,78 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: black; }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr  50% 1fr;
+  grid-template-rows: 375px 300px;
+  grid-gap: 15px;
+  padding: 15px; }
+  @media (max-width: 992px) {
+    .container {
+      grid-template-columns: 50%;
+      grid-template-rows: 225px 225px 225px; } }
+  @media (max-width: 414px) {
+    .container {
+      grid-template-columns: 100%;
+      grid-auto-rows: minmax(200px, 400px);
+      grid-template-rows: auto; } }
+
+.box-1 {
+  background-image: url("https://static.pexels.com/photos/168570/pexels-photo-168570.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media (max-width: 414px) {
+    .box-1 {
+      grid-row-start: 7; } }
+
+.box-2 {
+  background-image: url("https://static.pexels.com/photos/316435/pexels-photo-316435.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media (max-width: 414px) {
+    .box-2 {
+      grid-row-start: 2; } }
+
+.box-3 {
+  background-image: url("https://static.pexels.com/photos/230629/pexels-photo-230629.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media (max-width: 414px) {
+    .box-3 {
+      grid-row-start: 6; } }
+
+.box-4 {
+  background-image: url("https://static.pexels.com/photos/145939/pexels-photo-145939.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media (max-width: 414px) {
+    .box-4 {
+      grid-row-start: 4; } }
+
+.box-5 {
+  background-image: url("https://static.pexels.com/photos/37403/bora-bora-french-polynesia-sunset-ocean.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media (max-width: 414px) {
+    .box-5 {
+      grid-row-start: 5; } }
+
+.box-6 {
+  background-image: url("https://static.pexels.com/photos/247502/pexels-photo-247502.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media (max-width: 992px) {
+    .box-6 {
+      grid-column: 2; } }
+  @media (max-width: 414px) {
+    .box-6 {
+      grid-column: 1;
+      grid-row-start: 3; } }

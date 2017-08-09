@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  background: black;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr  50% 1fr;
+  grid-template-rows: 375px 300px;
+  grid-gap: 15px;
+  padding: 15px;
+@media (max-width: 992px) {
+  grid-template-columns: 50%;
+  grid-template-rows: 225px 225px 225px
+}
+@media (max-width: 414px) {
+   grid-template-columns: 100%;
+   grid-auto-rows: minmax(200px, 400px);
+   grid-template-rows: auto;
+} }
+ @mixin background($imgpath,$position: center,$size: cover,$repeat: no-repeat) {
+    background: {
+    image: url($imgpath);
+    position: $position;
+    size: $size;
+    repeat: $repeat;
+} }
+.box-1 {
+	 @include background('https://static.pexels.com/photos/168570/pexels-photo-168570.jpeg');
+ @media (max-width: 414px) {
+    grid-row-start: 7;
+} }
+ .box-2 {
+	 @include background('https://static.pexels.com/photos/316435/pexels-photo-316435.jpeg');
+ @media (max-width: 414px) {
+	  grid-row-start: 2;
+} }
+ .box-3 {
+   @include background('https://static.pexels.com/photos/230629/pexels-photo-230629.jpeg');
+  @media (max-width: 414px) {
+    grid-row-start: 6;
+} }
+  .box-4 {
+	 @include background('https://static.pexels.com/photos/145939/pexels-photo-145939.jpeg');
+
+  @media  (max-width: 414px) {
+    grid-row-start: 4;
+ } }
+  .box-5 {
+   @include background('https://static.pexels.com/photos/37403/bora-bora-french-polynesia-sunset-ocean.jpg');
+  @media (max-width: 414px) {
+     grid-row-start: 5;
+ } }
+ .box-6 {
+	 @include background('https://static.pexels.com/photos/247502/pexels-photo-247502.jpeg');
+  @media  (max-width: 992px) {
+     grid-column: 2;
+   }
+ @media  (max-width: 414px) {
+    grid-column: 1;
+   grid-row-start: 3;
+ } }
+ 
